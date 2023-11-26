@@ -19,7 +19,7 @@ const corsOptions = {
 }
 
 //database connection
-const mongoURI = 'mongodb://127.0.0.1:27017/tour'
+const mongoURI = process.env.MONGO_PORT;
 const connect = async() => {
     try {
         mongoose.connect(mongoURI, {
